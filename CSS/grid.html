@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: grid;
+        margin: 20px;
+        /* grid-gap: 10px; */
+        /* grid-template-columns: 100px 200px 300px; */
+        height: 100vh;
+        background-color: pink;
+        /* grid-template-rows: 50px 150px 50px; */
+
+        grid-template-areas: "H H H "
+        "SB C C"
+        "sb C C"
+        "F F F";
+    }
+
+    /* .item{
+        background-color: rgb(143, 227, 200);
+        color: black;
+        padding: 10px;
+        font-size: 28px;
+    } */
+    .header{
+        grid-column: 1/4;
+        background-color: palevioletred;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .sidebar{
+        grid-column: 1/2;
+        background-color: rosybrown;
+    }
+    .content{
+        grid-column: 2/4;
+        background-color: royalblue;
+    }
+    .parent{
+        border: 2px solid black;
+        /* grid-template-columns: repeat(3,1fr); */
+    }
+    .footer{
+        grid-column: 1/4;
+        background-color: brown;
+    }
+    /* .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    width: 100px;
+    background-color: aqua; */
+
+}
+
+</style>
+<body>
+    <div class="parent">
+        <div class="header">
+            <img src="./image 1.jpg" height="100px"
+            width="100px">
+            <!-- <div class="contact"> -->
+            <a href="../HTML/Contact.html">contact</a>
+            <!-- </div> -->
+
+        </div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

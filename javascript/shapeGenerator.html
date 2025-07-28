@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Generator</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .parent {
+            border: 2px solid black;
+            display: block;
+            position: absolute;
+            margin: 30px auto;
+            height: 100vh;
+            width: 100vw;
+            background-color: antiquewhite;
+            position: relative;
+        }
+
+        .circle, .square, .rectangle {
+            position: absolute;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+        }
+
+        .rectangle {
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎨 Shape Generator</h1>
+
+    <input type="text" id="shape" placeholder="Enter shape type"  />
+    <br />
+    <input type="color" id="color" placeholder="Enter color" />
+    <br />
+    <input type="number" id="size" placeholder="Enter quantity" />
+    <br />
+    <div class="parent" id="canvas"></div>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+
+        canvas.addEventListener("click", (e) => {
+            const shapeType = document.querySelector("#shape").value;
+            const color = document.querySelector("#color").value;
+            const quantity = parseInt(document.querySelector("#size").value);
+
+
+            const canvasRect = canvas.getBoundingClientRect();
+
+            for (let i = 0; i < quantity; i++) {
+                const shape = document.createElement("div");
+                shape.classList.add(shapeType);
+                shape.style.backgroundColor = color;
+
+                // Generate random position inside canvas
+                const x = Math.random() * (canvas.clientWidth - 100); // keep inside bounds
+                const y = Math.random() * (canvas.clientHeight - 100);
+
+                shape.style.left = `${x}px`;
+                shape.style.top = `${y}px`;
+
+                canvas.appendChild(shape);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <style>
+        */*{
+            color: green;
+        }*/
+
+.one {
+    color: red;
+    font-style: italic;
+}    
+
+#two {
+    color: blue;
+}
+
+p:nth-child(odd){
+    color:yellow;
+}
+
+input[type="text"]{
+    color:darkblue;
+}
+
+input::placeholder{
+    color:brown;
+}
+
+li::marker{
+    color:pink;
+}
+
+h3::after{
+    content: "mishra"
+}
+
+h3::before{
+    content: "my name is "
+}
+
+button:hover {
+    background-color: peachpuff;
+}
+    </style>
+</head>
+<body>
+    <h1 class="one">This is heading 1</h1>
+    <h2 id="two">This is heading 2</h2>
+    <p>tanima</p>
+    <p>laxmi</p>
+    <p>kaka</p>
+    <p>shorya</p>
+    <input type="text" placeholder="enter your name">
+    <ul type="square">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <h3>tanima </h3>
+    </ul>
+
+    <button>click me</button>
+
+
+</html>

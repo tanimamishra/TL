@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        height: 100vh;
+        background-color: pink;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .header{
+        background-color: antiquewhite;
+        height: 100px;
+        display: flex;
+        flex-direction:row;  
+        justify-content: space-between;     
+    
+    }
+
+    .child{
+            background-color: aqua;
+            height: 40px;
+            width: 100px;
+            margin: 10px;
+            color: rgb(55, 24, 190);
+    }
+
+    .content{
+        background-color: rgb(10, 179, 179);
+        height: 300px;
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+
+    }
+
+    .item{
+        background-color: cornflowerblue;
+        height: 80px;
+        width: 300px;
+        margin: 10px;
+        color: blanchedalmond;
+        position: absolute;
+        text-align: center;
+    }
+
+
+    .places{
+        background-color: blueviolet;
+        height: 300px;
+    }
+
+</style>
+<body>
+     <div class="parent">
+        <div class="header">
+            <img src="./image 1.jpg"
+            height="80px"
+            width="80px">
+            <div class="child one">
+                <a href="../HTML/form.html">contact</a>
+            </div>
+            <div class="child two">about us</div>
+            <div class="child three">home</div>
+            <div class="child four">login/Sign Up</div>
+        </div>
+
+        <div class="content">
+            <img src="./image 1.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+            <h1 class="item one">welcome to our tours and travel</h1>
+            <div class="item two">ghhjgkjhkhgh</div>
+        
+        </div>
+
+        <div class="places">
+
+        </div>
+
+
+     </div>
+</body>
+</html>
